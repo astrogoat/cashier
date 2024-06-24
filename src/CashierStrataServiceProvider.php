@@ -1,19 +1,19 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Astrogoat\CashierStrata;
 
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\AppPackageServiceProvider;
 use Spatie\LaravelPackageTools\Package;
-use VendorName\Skeleton\Settings\SkeletonSettings;
+use Astrogoat\CashierStrata\Settings\CashierStrataSettings;
 
-class SkeletonServiceProvider extends AppPackageServiceProvider
+class CashierStrataServiceProvider extends AppPackageServiceProvider
 {
     public function registerApp(App $app): App
     {
         return $app
-            ->name('skeleton')
-            ->settings(SkeletonSettings::class)
+            ->name('cashier-strata')
+            ->settings(CashierStrataSettings::class)
             ->migrations([
                 __DIR__ . '/../database/migrations',
                 __DIR__ . '/../database/migrations/settings',
@@ -24,6 +24,6 @@ class SkeletonServiceProvider extends AppPackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name('skeleton')->hasConfigFile()->hasViews();
+        $package->name('cashier-strata')->hasConfigFile()->hasViews();
     }
 }

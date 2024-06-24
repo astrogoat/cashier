@@ -1,18 +1,18 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "astrogoat/cashier",
+    "description": "A Strata Wrapper App for Laravel Cashier",
     "keywords": [
-        ":vendor_name",
+        "astrogoat",
         "laravel",
         "strata",
-        ":package_slug"
+        "cashier-strata"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/astrogoat/cashier",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Laura Tonning",
+            "email": "tonning@gmail.com",
             "role": "Developer"
         }
     ],
@@ -38,13 +38,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Astrogoat\\CashierStrata\\": "src",
+            "Astrogoat\\CashierStrata\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Astrogoat\\CashierStrata\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -52,15 +52,19 @@
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "vaimo/composer-patches": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Astrogoat\\CashierStrata\\CashierStrataServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "CashierStrata": "Astrogoat\\CashierStrata\\CashierStrataFacade"
             }
         }
     },
