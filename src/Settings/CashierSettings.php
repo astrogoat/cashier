@@ -2,19 +2,19 @@
 
 namespace Astrogoat\Cashier\Settings;
 
+use Astrogoat\Cashier\Actions\SyncProductsAndPrices;
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
-use Astrogoat\Cashier\Actions\SyncProductsAndPrices;
 
 class CashierSettings extends AppSettings
 {
-     public string $stripe_key;
-     public string $stripe_secret;
-     public string $stripe_webhook_secret;
+    public string $stripe_key;
+    public string $stripe_secret;
+    public string $stripe_webhook_secret;
 
-     protected static array $actions = [
-         SyncProductsAndPrices::class,
-     ];
+    protected static array $actions = [
+        SyncProductsAndPrices::class,
+    ];
 
     public static function encrypted(): array
     {

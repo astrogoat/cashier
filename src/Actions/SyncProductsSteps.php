@@ -12,7 +12,7 @@ enum SyncProductsSteps: string implements HasBatchableSteps
     case SYNCING = 'Syncing';
     case FINISHED = 'Finished';
 
-    public static function order() : array
+    public static function order(): array
     {
         return [
             SyncProductsSteps::FETCHING,
@@ -23,7 +23,7 @@ enum SyncProductsSteps: string implements HasBatchableSteps
         ];
     }
 
-    public function description() : string
+    public function description(): string
     {
         return match ($this) {
             self::FETCHING => 'Fetching all products from Stripe...',

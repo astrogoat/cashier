@@ -2,8 +2,8 @@
 
 namespace Astrogoat\Cashier\Models;
 
-use Helix\Lego\Models\User;
 use Helix\Lego\Models\Model;
+use Helix\Lego\Models\User;
 use Laravel\Cashier\Billable;
 
 class BillableUser extends Model
@@ -22,7 +22,8 @@ class BillableUser extends Model
         return static::find($user->id);
     }
 
-    #[\Override] public static function icon(): string
+    #[\Override]
+    public static function icon(): string
     {
         return '';
     }

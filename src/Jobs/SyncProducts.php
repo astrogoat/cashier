@@ -8,20 +8,17 @@ namespace Astrogoat\Cashier\Jobs;
 //use Astrogoat\Shopify\Events\ShopifyJobCancelled;
 //use Astrogoat\Shopify\Events\ShopifyJobFailed;
 //use Astrogoat\Cashier\Cashier;
-use Laravel\Cashier\Cashier;
 use Astrogoat\Cashier\Actions\SyncProductsAndPrices as SyncProductsAction;
 use Astrogoat\Cashier\Actions\SyncProductsSteps;
+use Illuminate\Bus\Batchable;
 //use Astrogoat\Shopify\Models\Product;
 //use Astrogoat\Shopify\Models\ProductVariant;
-use Illuminate\Bus\Batchable;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Collection;
-use Throwable;
+use Laravel\Cashier\Cashier;
 
 class SyncProducts implements ShouldQueue
 {

@@ -2,22 +2,22 @@
 
 namespace Astrogoat\Cashier;
 
-use Livewire\Livewire;
-use Helix\Fabrick\Icon;
-use Helix\Lego\Apps\App;
-use Helix\Lego\Menus\Menu;
-use Laravel\Cashier\Cashier;
-use Helix\Lego\Menus\Lego\Link;
-use Helix\Lego\Menus\Lego\Group;
-use Astrogoat\Cashier\Models\Price;
-use Helix\Lego\Apps\AppPackageServiceProvider;
-use Spatie\LaravelPackageTools\Package;
-use Astrogoat\Cashier\Models\BillableUser;
-use Astrogoat\Cashier\Settings\CashierSettings;
 use Astrogoat\Cashier\Actions\SyncProductsAndPrices;
+use Astrogoat\Cashier\Bootstrappers\CashierBootstrapper;
+use Astrogoat\Cashier\Models\BillableUser;
+use Astrogoat\Cashier\Models\Price;
 use Astrogoat\Cashier\Models\Product;
 use Astrogoat\Cashier\Providers\RouteServiceProvider;
-use Astrogoat\Cashier\Bootstrappers\CashierBootstrapper;
+use Astrogoat\Cashier\Settings\CashierSettings;
+use Helix\Fabrick\Icon;
+use Helix\Lego\Apps\App;
+use Helix\Lego\Apps\AppPackageServiceProvider;
+use Helix\Lego\Menus\Lego\Group;
+use Helix\Lego\Menus\Lego\Link;
+use Helix\Lego\Menus\Menu;
+use Laravel\Cashier\Cashier;
+use Livewire\Livewire;
+use Spatie\LaravelPackageTools\Package;
 
 class CashierServiceProvider extends AppPackageServiceProvider
 {

@@ -2,12 +2,12 @@
 
 namespace Astrogoat\Cashier\Bootstrappers;
 
-use Stancl\Tenancy\Contracts\Tenant;
-use Illuminate\Database\QueryException;
 use Astrogoat\Cashier\Settings\CashierSettings;
 use Illuminate\Contracts\Foundation\Application;
-use Stancl\Tenancy\Contracts\TenancyBootstrapper;
+use Illuminate\Database\QueryException;
 use Spatie\LaravelSettings\Exceptions\MissingSettings;
+use Stancl\Tenancy\Contracts\TenancyBootstrapper;
+use Stancl\Tenancy\Contracts\Tenant;
 
 class CashierBootstrapper implements TenancyBootstrapper
 {
@@ -28,7 +28,7 @@ class CashierBootstrapper implements TenancyBootstrapper
             'payment_notification' => $this->app['config']['cashier.payment_notification'],
             'invoices' => [
                 'options' => [
-                    'paper' => $this->app['config']['cashier.invoices.options.paper']
+                    'paper' => $this->app['config']['cashier.invoices.options.paper'],
                 ],
             ],
         ];

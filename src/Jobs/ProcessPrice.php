@@ -2,21 +2,25 @@
 
 namespace Astrogoat\Cashier\Jobs;
 
-use Laravel\Cashier\Cashier;
-use Illuminate\Support\Carbon;
-use Stripe\Price as StripePrice;
-use Illuminate\Bus\Queueable;
-use Illuminate\Bus\Batchable;
 use Astrogoat\Cashier\Models\Price;
 use Astrogoat\Cashier\Models\Product;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Bus\Batchable;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Carbon;
+use Laravel\Cashier\Cashier;
+use Stripe\Price as StripePrice;
 
 class ProcessPrice implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, Batchable;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
+    use Batchable;
 
     public function __construct(private readonly StripePrice $price)
     {

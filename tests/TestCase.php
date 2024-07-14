@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Cashier\Tests;
 
+use Astrogoat\Cashier\CashierServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Cashier\CashierServiceProvider;
 
 class TestCase extends Orchestra
 {

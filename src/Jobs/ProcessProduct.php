@@ -2,19 +2,23 @@
 
 namespace Astrogoat\Cashier\Jobs;
 
-use Illuminate\Support\Carbon;
-use Stripe\Product as StripeProduct;
-use Illuminate\Bus\Queueable;
-use Illuminate\Bus\Batchable;
 use Astrogoat\Cashier\Models\Product;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Bus\Batchable;
+use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Carbon;
+use Stripe\Product as StripeProduct;
 
 class ProcessProduct implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, Batchable;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
+    use Batchable;
 
     public function __construct(private readonly StripeProduct $product)
     {

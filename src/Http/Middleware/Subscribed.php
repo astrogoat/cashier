@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Cashier\Http\Middleware;
 
+use Astrogoat\Cashier\Models\BillableUser;
 use Closure;
 use Illuminate\Http\Request;
-use Astrogoat\Cashier\Models\BillableUser;
 use Symfony\Component\HttpFoundation\Response;
 
 class Subscribed
