@@ -1,10 +1,10 @@
 <?php
 
-namespace Astrogoat\CashierStrata\Tests;
+namespace Astrogoat\Cashier\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\CashierStrata\CashierStrataServiceProvider;
+use Astrogoat\Cashier\CashierServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Astrogoat\\CashierStrata\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Astrogoat\\Cashier\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            CashierStrataServiceProvider::class,
+            CashierServiceProvider::class,
         ];
     }
 

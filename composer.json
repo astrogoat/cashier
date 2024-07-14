@@ -5,7 +5,7 @@
         "astrogoat",
         "laravel",
         "strata",
-        "cashier-strata"
+        "cashier"
     ],
     "homepage": "https://github.com/astrogoat/cashier",
     "license": "MIT",
@@ -25,8 +25,9 @@
     "require": {
         "php": "^8.3",
         "astrogoat/strata": "^0.7.7",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0",
+        "laravel/cashier": "^v14.14.0",
+        "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.3|^7.0",
@@ -38,13 +39,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Astrogoat\\CashierStrata\\": "src",
-            "Astrogoat\\CashierStrata\\Database\\Factories\\": "database/factories"
+            "Astrogoat\\Cashier\\": "src",
+            "Astrogoat\\Cashier\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Astrogoat\\CashierStrata\\Tests\\": "tests"
+            "Astrogoat\\Cashier\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -61,11 +62,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Astrogoat\\CashierStrata\\CashierStrataServiceProvider"
-            ],
-            "aliases": {
-                "CashierStrata": "Astrogoat\\CashierStrata\\CashierStrataFacade"
-            }
+                "Astrogoat\\Cashier\\CashierServiceProvider"
+            ]
         }
     },
     "minimum-stability": "stable",

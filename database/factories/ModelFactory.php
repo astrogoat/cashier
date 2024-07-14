@@ -1,6 +1,6 @@
 <?php
 
-namespace Astrogoat\CashierStrata\Database\Factories;
+namespace Astrogoat\Cashier\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
