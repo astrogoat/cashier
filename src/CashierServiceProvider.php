@@ -2,6 +2,7 @@
 
 namespace Astrogoat\Cashier;
 
+use Astrogoat\Cashier\Http\Models\Prices\Form;
 use Astrogoat\Cashier\Actions\SyncProductsAndPrices;
 use Astrogoat\Cashier\Bootstrappers\CashierBootstrapper;
 use Astrogoat\Cashier\Models\BillableUser;
@@ -71,5 +72,6 @@ class CashierServiceProvider extends AppPackageServiceProvider
         Cashier::useCustomerModel(BillableUser::class);
 
         Livewire::component('astrogoat.cashier.actions.sync-products-and-prices', SyncProductsAndPrices::class);
+        Livewire::component('astrogoat.cashier.http.models.prices.form', Form::class);
     }
 }
