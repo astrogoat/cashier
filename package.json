@@ -1,6 +1,6 @@
 {
     "name": "cashier-strata",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "[![Latest Version on Packagist](https://img.shields.io/packagist/v/astrogoat/cashier-strata.svg?style=flat-square)](https://packagist.org/packages/astrogoat/cashier-strata) [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/astrogoat/cashier-strata/run-tests?label=tests)](https://github.com/astrogoat/cashier-strata/actions?query=workflow%3Arun-tests+branch%3Amain) [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/astrogoat/cashier-strata/Check%20&%20fix%20styling?label=code%20style)](https://github.com/astrogoat/cashier-strata/actions?query=workflow%3A\"Check+%26+fix+styling\"+branch%3Amain) [![Total Downloads](https://img.shields.io/packagist/dt/astrogoat/cashier-strata.svg?style=flat-square)](https://packagist.org/packages/astrogoat/cashier-strata)",
     "directories": {
         "test": "tests"
