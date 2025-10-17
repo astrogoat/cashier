@@ -5,6 +5,15 @@ use Illuminate\Support\Facades\Route;
 use Astrogoat\Cashier\Models\BillableUser;
 use Laravel\Cashier\Exceptions\InvalidCustomer;
 use Astrogoat\Cashier\Http\Controllers\CheckoutController;
+use Astrogoat\Cashier\Http\Controllers\CashierWebhookController;
+
+Route::group([
+    'prefix' => config('cashier.path'),
+    'namespace' => 'Laravel\Cashier\Http\Controllers',
+    'as' => 'cashier.',
+], function () {
+    Route::post('webhook', [CashierWebhookController::class, 'handleWebhook'])->name('webhook');
+});
 
 Route::get('/billing-portal', function (Request $request) {
     try {
